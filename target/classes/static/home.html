@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent-E-Gadget</title>
+    
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gadgets">Rent a Gadget</a></li>
+            <li><a href="#submit-gadget">Rent your Gadget</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="javascript:void(0)" id="cart-icon" onclick="toggleCart()">🛒<span id="cart-count">0</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Секция Hero -->
+    <section class="hero" id="home">
+        <h1>Rent-E-Gadget</h1>
+        <p>Rent top-quality gadgets or submit your own for profit.</p>
+        <a href="#how-it-works" class="btn">Learn More</a>
+    </section>
+
+    <!-- Секция How It Works -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>Submit Your Gadget</h3>
+                <p>Give us your unused gadgets. We'll check their functionality and authenticity.</p>
+            </div>
+            <div class="step">
+                <h3>Verification</h3>
+                <p>Our team verifies the condition and authenticity of your device.</p>
+            </div>
+            <div class="step">
+                <h3>Earn Money</h3>
+                <p>Your gadget is listed for rent, and you receive a percentage from each rental.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Your Gadget Section -->
+    <section id="submit-gadget" style="padding: 50px 0; background-color: #222;">
+        <div class="container">
+            <h2 class="section-title">Submit Your Gadget</h2>
+            <form id="submit-gadget-form" class="gadget-form">
+                <div class="form-group">
+                    <label for="gadget-name">Gadget Name:</label>
+                    <input type="text" id="gadget-name" name="gadget-name" placeholder="Enter gadget name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gadget-price">Price per Day (in $):</label>
+                    <input type="number" id="gadget-price" name="gadget-price" placeholder="Enter price per day" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gadget-image">Gadget Image URL:</label>
+                    <input type="url" id="gadget-image" name="gadget-image" placeholder="Paste image URL" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Add Gadget</button>
+            </form>
+        </div>
+    </section>
+<!-- Cart Drawer -->
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <span class="close-cart" onclick="toggleCart()">×</span>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+        <p id="cart-total">Total: $0</p>
+        <button id="checkout-btn" class="checkout-btn">Checkout</button>
+    </div>
+</div>
+<!-- Gadgets Section -->
+<section class="gadgets" id="gadgets">
+    <h2>Available Gadgets for Rent</h2>
+    <div class="gadget-list">
+        <div class="gadget-item" data-name="iPhone 12 Pro" data-price="20">
+            <img src="https://cdn.new-brz.net/app/public/models/MGMN3/large/w/201230150020239921.webp" alt="iPhone 12 Pro">
+            <h3>iPhone 12 Pro</h3>
+            <p>Price: $20/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Samsung Galaxy S21" data-price="18">
+            <img src="https://cdn.new-brz.net/app/public/models/SM-G991BZVDSEK/large/w/210428160018671210.webp" alt="Samsung Galaxy S21">
+            <h3>Samsung Galaxy S21</h3>
+            <p>Price: $18/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Apple Watch 10" data-price="10">
+            <img src="https://opis-cdn.tinkoffjournal.ru/mercury/03-apple-watch-series-10.jpg" alt="Apple Watch 10">
+            <h3>Apple Watch 10</h3>
+            <p>Price: $10/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Airpods Pro 2" data-price="10">
+            <img src="https://resources.cdn-kaspi.kz/img/m/p/hb7/h5e/64511113199646.jpg?format=gallery-large" alt="Airpods Pro 2">
+            <h3>Airpods Pro 2</h3>
+            <p>Price: $10/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Galaxy Buds Pro" data-price="10">
+            <img src="https://activ.kz/shop/media/products/galaxy_buds_pro_black.png" alt="Galaxy Buds Pro">
+            <h3>Galaxy Buds Pro</h3>
+            <p>Price: $10/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="MacBook Air M2" data-price="30">
+            <img src="https://images.satu.kz/189318992_w600_h600_189318992.jpg" alt="MacBook Air M2">
+            <h3>MacBook Air M2</h3>
+            <p>Price: $30/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="iPad Mini 6" data-price="25">
+            <img src="https://cdn0.ipoint.kz/AfrOrF3gWeDA6VOlDG4TzxMv39O7MXnF4CXpKUwGqRM/resize:fill:540/bg:f6f6f6/q:100/plain/s3://catalog-products/210915083522608749/210927160046370589.png@webp" alt="iPad Mini 6">
+            <h3>iPad Mini 6</h3>
+            <p>Price: $25/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="PS5" data-price="30">
+            <img src="https://sonycenter.kz/image/cache/catalog/products/playstation/PS5-Slim/PS5-Slim-600x600.jpg" alt="PS5">
+            <h3>PS5</h3>
+            <p>Price: $30/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Razer Blade 13" data-price="30">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcIm2w9Ur0qQsDKVyy24Tst_oeSPzA1pOLag&s" alt="Razer Blade 13">
+            <h3>Razer Blade 13</h3>
+            <p>Price: $30/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Instax Mini 13" data-price="5">
+            <img src="https://api.technodom.kz/f3/api/v1/images/800/800/cifr_fotoapparat_fujifilm_instax_mini_12_mint_green_271188_1.jpg" alt="Instax Mini 13">
+            <h3>Instax Mini 13</h3>
+            <p>Price: $5/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Xbox Series X" data-price="30">
+            <img src="https://object.pscloud.io/cms/cms/Photo/img_0_68_218_3_1.jpg" alt="Xbox Series X">
+            <h3>Xbox Series X</h3>
+            <p>Price: $30/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Canon PowerShot G7X Mark III" data-price="10">
+            <img src="https://videoset.kz/wp-content/uploads/2022/05/1-23.jpg" alt="Canon PowerShot G7X Mark III">
+            <h3>Canon PowerShot G7X Mark III</h3>
+            <p>Price: $10/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="GoPro 10" data-price="10">
+            <img src="https://object.pscloud.io/cms/cms/Photo/img_0_647_47_4_6.png" alt="GoPro 10">
+            <h3>GoPro 10</h3>
+            <p>Price: $10/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Nintendo Switch" data-price="17">
+            <img src="https://object.pscloud.io/cms/cms/Photo/img_0_68_225_0_1.jpg" alt="Nintendo Switch">
+            <h3>Nintendo Switch</h3>
+            <p>Price: $17/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Quest 2" data-price="11">
+            <img src="https://images.satu.kz/203840024_w600_h600_203840024.jpg" alt="Quest 2">
+            <h3>Quest 2</h3>
+            <p>Price: $11/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Yandex Mini" data-price="4">
+            <img src="https://sonycenter.kz/image/cache/catalog/products/yandex/station-mini/white/yandex-station-mini-white-01-600x600.png" alt="Yandex Mini">
+            <h3>Yandex Mini</h3>
+            <p>Price: $4/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="gadget-item" data-name="Graphic Tablet" data-price="4">
+            <img src="https://bestor.in/cdn/shop/files/Bestor_Digital_Graphic_Tablet_01-removebg-preview.png" alt="Graphic Tablet">
+            <h3>Graphic Tablet</h3>
+            <p>Price: $4/day</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Login Form -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <button type="submit" class="btn-submit">Log In</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Login Form -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" onclick="login()">Log In</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Футер -->
+    <footer id="footer">
+        <p>&copy; 2024 Gadget Rental Marketplace</p>
+    </footer>
+
+    <!-- Подключаем JS -->
+    <script src="home.js"></script>
+</body>
+</html>

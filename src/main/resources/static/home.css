@@ -1,0 +1,433 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a1a; /* Очень темный фон */
+    color: #e0e0e0; /* Светлый текст */
+}
+
+/* Стили для навигации */
+header {
+    background-color: #222; /* Темно-серый */
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #e0e0e0; /* Светлый текст */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для Hero секции */
+.hero {
+    background: url('w.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #e3dcdc;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    background-color: #2980b9; /* Ярко-синий */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.hero .btn:hover {
+    background-color: #3498db; /* Светло-синий */
+}
+
+/* Стили для секции "How It Works" */
+#how-it-works {
+    padding: 50px;
+    background-color: #222; /* Темно-серый */
+    text-align: center;
+}
+
+#how-it-works h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #e0e0e0; /* Светлый текст */
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    width: 30%;
+    background-color: #333; /* Темно-серый */
+    border: 1px solid #444; /* Более темный серый */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.step h3 {
+    color: #e0e0e0; /* Светлый текст */
+    margin-bottom: 15px;
+}
+
+.step p {
+    font-size: 1.1em;
+}
+
+/* Стили для секции с гаджетами */
+.gadgets {
+    padding: 50px;
+    background-color: #222; /* Темно-серый */
+    text-align: center;
+}
+
+.gadgets h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #e0e0e0; /* Светлый текст */
+    text-align: center;
+}
+
+.gadget-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gadget-item {
+    width: 30%;
+    background-color: #333; /* Темно-серый */
+    border: 1px solid #444; /* Более темный серый */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.gadget-item img {
+    width: 100%;
+    border-bottom: 1px solid #444; /* Темно-серый */
+    margin-bottom: 15px;
+}
+
+.gadget-item h3 {
+    margin-bottom: 10px;
+    color: #e0e0e0; /* Светлый текст */
+}
+
+.gadget-item p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.gadget-item .btn {
+    background-color: #2980b9; /* Ярко-синий */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.gadget-item .btn:hover {
+    background-color: #3498db; /* Светло-синий */
+}
+
+/* Стили для футера */
+footer {
+    background-color: #222; /* Темно-серый */
+    color: #e0e0e0; /* Светлый текст */
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Container for padding and alignment */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section title */
+.section-title {
+    font-size: 2.5em;
+    color: #e0e0e0; /* Светлый текст */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Form styling */
+.gadget-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.form-group label {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #e0e0e0; /* Светлый текст */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #444; /* Темно-серый */
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+    background-color: #333; /* Темно-серый для полей ввода */
+    color: #e0e0e0; /* Светлый текст */
+}
+
+.form-group input:focus {
+    border-color: #2980b9; /* Ярко-синий */
+    outline: none;
+}
+
+/* Button styling */
+.btn-submit {
+    background-color: #2980b9; /* Ярко-синий */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #3498db; /* Светло-синий */
+}
+
+/* Add spacing between sections */
+#submit-gadget {
+    margin-bottom: 50px;
+}
+
+/* Make sure the gadget section is properly displayed */
+.gadgets {
+    padding: 50px 20px;
+    background-color: #222; /* Темно-серый */
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+/* Cart Drawer Styles */
+.cart-drawer {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #1a1a1a; /* Очень темный фон */
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.7);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    color: #e0e0e0; /* Светлый текст */
+}
+
+.close-cart {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+#cart-items {
+    margin-top: 20px;
+    max-height: 70%;
+    overflow-y: auto;
+}
+
+.cart-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.checkout-btn {
+    background-color: #2980b9; /* Ярко-синий */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+/* Adjust padding for other sections to make space for the cart */
+.gadgets, #submit-gadget {
+    padding-right: 320px; /* Ensures cart drawer doesn't overlap content */
+}
+
+/* Make header sticky */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222; /* Темно-серый */
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Ensures items are vertically aligned */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #e0e0e0; /* Светлый текст */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the cart icon */
+#cart-icon {
+    position: relative;
+    font-size: 1.2em; /* Adjust font size to align with other menu items */
+    color: #e0e0e0; /* Светлый текст */
+    display: flex;
+    align-items: center; /* Ensures the icon aligns vertically */
+}
+
+/* Adjust cart count size */
+#cart-count {
+    position: absolute;
+    top: -10px; /* Adjust positioning to make it closer to the icon */
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 6px;  /* Reduce padding to make the circle smaller */
+    font-size: 0.65em;  /* Smaller font size */
+    min-width: 16px;   /* Minimum width for the badge */
+    text-align: center;
+}
+
+/* Add padding to the top of the page content to avoid overlap with the sticky header */
+body {
+    padding-top: 60px; /* Adjust this based on the height of your header */
+}
+
+/* Dropdown icon hover effect */
+nav ul li a:hover i {
+    color: #bdc3c7; /* Светло-серый */
+}
+
+/* Hide the profile dropdown menu when clicking elsewhere */
+body {
+    padding-top: 60px; /* For sticky header */
+    position: relative;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Более темный фон */
+}
+
+/* Modal Content Box */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222; /* Темно-серый */
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0
